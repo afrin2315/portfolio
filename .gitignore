@@ -1,0 +1,21 @@
+# Netlify
+.netlify/
+
+# Node
+node_modules/
+
+# Local deploy artifact (we publish from root via netlify.toml)
+dist/
+
+# Source / scratch files (not part of the public site)
+resume.txt
+git.txt
+Professinal pic.jpeg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
