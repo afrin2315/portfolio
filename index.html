@@ -321,37 +321,22 @@
           <div class="project-num">01</div>
           <div class="project-content">
             <div class="project-tags">
-              <span>NLP</span><span>LLMs</span><span>Full-Stack</span>
-            </div>
-            <h3>Hybrid Mental Health Chatbot</h3>
-            <p>
-              Full-stack chatbot with <strong>JWT/bcrypt auth</strong>, a multi-model emotion
-              pipeline (DistilBERT + LinearSVC + heuristic fallback, <strong>91% accuracy</strong>),
-              <strong>crisis-aware routing</strong>, and per-turn risk insight bars.
-              Deployed on HF Docker Spaces via Gunicorn with graceful model fallback.
-            </p>
-            <div class="project-stack">Flask · DistilBERT · LinearSVC · SQLite · Docker</div>
-            <div class="project-links">
-              <a href="https://afrin18-hybrid-mental-health-chatbot.hf.space" target="_blank" rel="noopener">Live demo →</a>
-              <a href="https://github.com/afrin2315/hybrid_chatbot" target="_blank" rel="noopener">Code →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project reveal">
-          <div class="project-num">02</div>
-          <div class="project-content">
-            <div class="project-tags">
               <span>FastAPI</span><span>React</span><span>WebSockets</span>
             </div>
             <h3>SmartAttend — QR Attendance System</h3>
             <p>
-              <strong>Dual-QR anti-proxy attendance</strong>: per-session expiring QR + server-side
-              identity verification prevents screenshot-sharing. Five role types
-              (Admin/Teacher/HR/Student/Employee) via role-based JWT, real-time updates over
-              WebSockets, late detection, CSV export. Deployed on Vercel + Railway + Supabase.
+              A full-stack attendance platform with a <strong>dual-QR anti-proxy flow</strong>:
+              every user has a permanent personal QR, every session has a fresh expiring QR,
+              and attendance is only marked when an authenticated user scans a live session QR —
+              identity and validity verified together.
             </p>
-            <div class="project-stack">FastAPI · React · PostgreSQL · JWT · WebSockets · Alembic</div>
+            <p>
+              Role-aware dashboards for <strong>Admin / Teacher / HR / Student / Employee</strong>
+              behind JWT + bcrypt auth; <strong>real-time live attendance over WebSockets</strong>;
+              present/late status with grace windows; CSV exports; Alembic migrations on Supabase
+              PostgreSQL. Frontend on Vercel, API on Railway.
+            </p>
+            <div class="project-stack">FastAPI · React · Tailwind · PostgreSQL · SQLAlchemy · Alembic · WebSockets</div>
             <div class="project-links">
               <a href="https://smart-attend-beryl.vercel.app" target="_blank" rel="noopener">Live demo →</a>
               <a href="https://smartattend-api-production-9bd4.up.railway.app/docs" target="_blank" rel="noopener">API docs →</a>
@@ -361,19 +346,53 @@
         </article>
 
         <article class="project reveal">
+          <div class="project-num">02</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>NLP</span><span>LLMs</span><span>Full-Stack</span>
+            </div>
+            <h3>Hybrid Mental Health Chatbot</h3>
+            <p>
+              The system behind the patent — a layered emotion-classification pipeline rather
+              than a single model: <strong>DistilBERT</strong> as the primary classifier,
+              <strong>LinearSVC</strong> as a fast safety check, rule-based crisis routing,
+              and <strong>Gemini</strong> for grounded supportive responses (with a local
+              heuristic fallback when the LLM is unavailable).
+            </p>
+            <p>
+              Built on <strong>Flask</strong> with signup/login (bcrypt-hashed passwords),
+              session-based protected chat routes, SQLite-backed accounts, and live deployment
+              on a <strong>Hugging Face Docker Space</strong> via Gunicorn.
+            </p>
+            <div class="project-stack">Flask · DistilBERT · LinearSVC · TensorFlow · Gemini · SQLite · Docker</div>
+            <div class="project-links">
+              <a href="https://afrin18-hybrid-mental-health-chatbot.hf.space" target="_blank" rel="noopener">Live demo →</a>
+              <a href="https://huggingface.co/spaces/Afrin18/hybrid-mental-health-chatbot" target="_blank" rel="noopener">HF Space →</a>
+              <a href="https://github.com/afrin2315/hybrid_chatbot" target="_blank" rel="noopener">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
           <div class="project-num">03</div>
           <div class="project-content">
             <div class="project-tags">
-              <span>Semantic NLP</span><span>Gemini API</span>
+              <span>Semantic NLP</span><span>Gemini</span><span>Privacy</span>
             </div>
-            <h3>AI Resume Screener &amp; Job-Fit Analyzer</h3>
+            <h3>AI Resume Screener — Gemini + Evidence</h3>
             <p>
-              Resume-to-JD scoring via <strong>Sentence Transformers (all-MiniLM-L6-v2)</strong>
-              cosine similarity + <strong>Gemini 1.5 Flash</strong> for skill-gap analysis,
-              improvement suggestions, and recruiter summaries. <strong>PII redacted</strong>
-              before any LLM call. Containerized with Docker + Gunicorn.
+              Compare a resume PDF against a job description and get back a fit score
+              (0–100), verdict tier, matching/missing skills, suggestions, and a recruiter
+              summary — plus an <strong>evidence section</strong> that maps each requirement
+              to the exact resume proof with a confidence rating.
             </p>
-            <div class="project-stack">Gemini · Sentence Transformers · Flask · Docker</div>
+            <p>
+              Hardened for real public use: <strong>async jobs with polling</strong> so requests
+              never time out, optional <strong>Redis-backed queue</strong> for traffic spikes,
+              <strong>PII redaction</strong> (email/phone/URLs) before any LLM call, BYO-key
+              support, and a <strong>local heuristic fallback</strong> when Gemini rate-limits.
+            </p>
+            <div class="project-stack">Gemini · Sentence Transformers · PyMuPDF · Flask · Redis · Docker</div>
             <div class="project-links">
               <a href="https://huggingface.co/spaces/Afrin18/ai-resume-screener" target="_blank" rel="noopener">Live demo →</a>
               <a href="https://github.com/afrin2315/ai-resume-screener" target="_blank" rel="noopener">Code →</a>
@@ -385,17 +404,24 @@
           <div class="project-num">04</div>
           <div class="project-content">
             <div class="project-tags">
-              <span>Agentic AI</span><span>LangChain</span>
+              <span>Voice UI</span><span>Web Speech API</span><span>Mobile-First</span>
             </div>
-            <h3>TalentMatch — Resume Screening Agent</h3>
+            <h3>Blue-Collar Voice Portfolio Builder</h3>
             <p>
-              An agentic pipeline where LangChain agents orchestrate multi-step candidate
-              evaluation — extracting structured insights and ranking applicants against
-              job descriptions autonomously.
+              A voice-first profile builder for blue-collar workers — people who can talk
+              fluently about their work but may not type or read English easily. Workers
+              speak their answers (<strong>STT</strong>), the app speaks the next question back
+              (<strong>TTS</strong>), and a profile is generated they can download as text.
             </p>
-            <div class="project-stack">LangChain · Python · Agents</div>
+            <p>
+              Shipping niceties for low-friction use: progress bar, <strong>auto-save via
+              localStorage</strong> so a session can be paused and resumed, photo/video upload
+              for portfolio media, job-role normalization, mobile-responsive layout.
+              Backed by a Node.js question service with role-aware question routing.
+            </p>
+            <div class="project-stack">Vanilla JS · HTML · CSS · Web Speech API · Node.js · Express</div>
             <div class="project-links">
-              <a href="https://github.com/afrin2315/talentmatch-ai-resume-screening-agent" target="_blank" rel="noopener">Code →</a>
+              <a href="https://github.com/afrin2315/blue-collar-portfolio" target="_blank" rel="noopener">Code →</a>
             </div>
           </div>
         </article>
@@ -404,17 +430,23 @@
           <div class="project-num">05</div>
           <div class="project-content">
             <div class="project-tags">
-              <span>Computer Vision</span><span>Explainable AI</span>
+              <span>LLMs</span><span>ATS</span><span>Streamlit</span>
             </div>
-            <h3>Early Disease Detection</h3>
+            <h3>TalentMatch — AI Resume Screening Agent</h3>
             <p>
-              AI-assisted medical imaging using <strong>DenseNet121</strong> for chest X-ray
-              pneumonia classification with <strong>Grad-CAM</strong> heatmaps — making model
-              decisions transparent for clinical review.
+              A recruiter-facing tool that ingests <strong>multiple PDF resumes at once</strong>,
+              extracts text with <strong>pdfplumber</strong>, and uses <strong>OpenAI</strong> to
+              evaluate every candidate against a pasted job description.
             </p>
-            <div class="project-stack">TensorFlow · DenseNet121 · Grad-CAM</div>
+            <p>
+              Outputs a structured <strong>ATS report</strong> per candidate — overall score,
+              strengths, weaknesses, missing keywords, hard/soft skill match, and a final
+              verdict (Strong / Medium / Weak Fit) — then ranks all candidates from highest
+              to lowest in a clean dark-themed dashboard.
+            </p>
+            <div class="project-stack">Python · Streamlit · OpenAI · pdfplumber · Pandas</div>
             <div class="project-links">
-              <a href="https://github.com/afrin2315/early-disease-detection" target="_blank" rel="noopener">Code →</a>
+              <a href="https://github.com/afrin2315/talentmatch-ai-resume-screening-agent" target="_blank" rel="noopener">Code →</a>
             </div>
           </div>
         </article>
@@ -423,15 +455,72 @@
           <div class="project-num">06</div>
           <div class="project-content">
             <div class="project-tags">
-              <span>NLP</span><span>Classification</span>
+              <span>Computer Vision</span><span>Explainable AI</span><span>Healthcare</span>
+            </div>
+            <h3>Spartans AI — Chest X-Ray Diagnostic</h3>
+            <p>
+              A pneumonia-screening dashboard that loads a trained <strong>DenseNet121</strong>
+              model in a <strong>Streamlit</strong> app, predicts pneumonia presence on uploaded
+              X-rays, and overlays <strong>Grad-CAM heatmaps</strong> showing exactly which
+              regions drove the decision.
+            </p>
+            <p>
+              Tuned with a clinical bias toward <strong>high recall (94% sensitivity)</strong>
+              to minimize false negatives, with an F1 of 0.8151. Includes drag-and-drop upload,
+              real-time confidence scores, and a performance metrics panel — designed so
+              clinicians can sanity-check the model's reasoning, not just trust the output.
+            </p>
+            <div class="project-stack">TensorFlow · DenseNet121 · Grad-CAM · Streamlit · OpenCV</div>
+            <div class="project-links">
+              <a href="https://github.com/afrin2315/early-disease-detection" target="_blank" rel="noopener">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-num">07</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>LLMs</span><span>Tool Use</span><span>Safety</span>
+            </div>
+            <h3>AI-Powered Text Adventure Game</h3>
+            <p>
+              An interactive text adventure where the LLM generates dynamic narratives that
+              adapt to player choices. Includes an <strong>inventory system</strong>, combat
+              mechanics, character progression (HP / XP / gold), and multi-location world
+              exploration — all driven by tool-calling to game-state functions.
+            </p>
+            <p>
+              Built with safety in mind: <strong>content moderation</strong> on both user input
+              and model output, and <strong>prompt-injection sanitization</strong>.
+              Gemini-powered when an API key is provided, with rich fallback content otherwise.
+              Wrapped in a clean Gradio web UI.
+            </p>
+            <div class="project-stack">Python · Gemini · Gradio · Tool Calling · Content Moderation</div>
+            <div class="project-links">
+              <a href="https://github.com/afrin2315/game" target="_blank" rel="noopener">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-num">08</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>NLP</span><span>XGBoost</span><span>Classification</span>
             </div>
             <h3>Fake News Detection</h3>
             <p>
-              TF-IDF based fake-news classifier using Logistic Regression and Random Forest
-              with advanced text preprocessing, class balancing, and rigorous evaluation —
-              built for noisy real-world data.
+              End-to-end fake-news classifier built on a real-world dataset (True.csv /
+              Fake.csv). <strong>TF-IDF</strong> vectorization feeds an <strong>XGBoost</strong>
+              classifier; standard NLP preprocessing (tokenization, lowercasing, stopword
+              removal) on the input.
             </p>
-            <div class="project-stack">scikit-learn · Python · TF-IDF</div>
+            <p>
+              Wrapped in a <strong>Flask</strong> web interface where a user pastes news text
+              and gets back a Real / Fake verdict in real time. Deployed publicly on Render.
+            </p>
+            <div class="project-stack">Python · XGBoost · TF-IDF · NLTK · scikit-learn · Flask</div>
             <div class="project-links">
               <a href="https://github.com/afrin2315/fake-news-detection" target="_blank" rel="noopener">Code →</a>
             </div>
