@@ -384,8 +384,8 @@ img { max-width: 100%; display: block; }
 .card-icon {
   width: 36px; height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  display: grid; place-items: center; color: #fff;
+  background: var(--ink);
+  display: grid; place-items: center; color: var(--bg);
 }
 .card-dot {
   width: 10px; height: 10px; border-radius: 50%;
