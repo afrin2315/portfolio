@@ -1,0 +1,190 @@
+%-------------------------
+% ATS-Optimized 1-Page Resume - Afrin Kousar
+% Target: General / All-Purpose (share for referrals, no specific JD)
+% Compiler: pdfLaTeX (Overleaf)
+% Font: XCharter (professional serif)
+%-------------------------
+
+\documentclass[letterpaper,9pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\input{glyphtounicode}
+
+%------------- PAGE SETUP ----------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+%------------- SECTION FORMATTING ----------------
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\small\bfseries
+}{}{0em}{}[\color{black}\titlerule\vspace{-1pt}]
+
+%------------- CUSTOM COMMANDS ----------------
+\newcommand{\resumeItem}[1]{%
+  \item\scriptsize{#1}%
+}
+
+\newcommand{\resumeEduHeading}[3]{%
+  \vspace{0pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\small #1} & \textit{\scriptsize #2}\\
+    \scriptsize #3 &\\
+  \end{tabular*}\vspace{-3pt}%
+}
+
+\newcommand{\resumeSubheading}[2]{%
+  \vspace{1pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\small #1} & \textit{\scriptsize #2}\\
+  \end{tabular*}\vspace{-3pt}%
+}
+
+\newcommand{\resumeProjectHeading}[1]{%
+  \vspace{0pt}\item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \scriptsize #1\\
+  \end{tabular*}\vspace{-3pt}%
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,itemsep=1pt,topsep=1pt,parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%============================================================
+\begin{document}
+
+%------------- HEADER ----------------
+\begin{center}
+  {\LARGE\scshape\textbf{Afrin Kousar}}\\\vspace{3pt}
+  \footnotesize
+  Bangalore, Karnataka, India~$|$~
+  \href{mailto:afrinkousar30@gmail.com}{afrinkousar30@gmail.com}~$|$~
+  +91~7975375874~$|$~
+  \href{https://afrin-kousar.netlify.app/}{\underline{Portfolio}}~$|$~
+  \href{https://linkedin.com/in/afrin-kousar}{\underline{LinkedIn}}~$|$~
+  \href{https://github.com/afrin2315}{\underline{GitHub}}
+\end{center}
+\vspace{-7pt}
+
+%------------- SUMMARY ----------------
+\section{Summary}
+{\scriptsize
+\textbf{AI/ML Engineer \& Software Developer} who builds and ships \textbf{end-to-end systems} - from \textbf{ML, NLP, and Generative AI} models to \textbf{full-stack web apps} and production deployment. \textbf{Indian Patent Holder (2025)} for a hybrid NLP system, with \textbf{5+ live deployments} spanning AI services, \textbf{REST/WebSocket} backends, and data pipelines. Strong in \textbf{Python, FastAPI, React, PyTorch, LLMs/RAG, and SQL}.
+}
+
+%------------- TECHNICAL SKILLS ----------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.1in,label={},itemsep=1pt,topsep=2pt,parsep=0pt]
+  \scriptsize{
+    \item \textbf{ML \& AI:} Scikit-learn, TensorFlow, PyTorch, XGBoost, DistilBERT, Transformers, LLMs, RAG, LangChain, Gemini API, Prompt Engineering, NLP, Embeddings, FAISS, ChromaDB
+    \item \textbf{Full-Stack Dev:} React.js, Vite, Tailwind CSS, FastAPI, Flask, REST APIs, WebSockets, JWT Auth, Gunicorn, HTML, CSS, Recharts
+    \item \textbf{Databases:} PostgreSQL, SQLite, MongoDB, Redis, SQLAlchemy, Alembic
+    \item \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda, RDS), Docker, GitHub Actions, Vercel, Railway, Hugging Face Spaces
+    \item \textbf{Languages:} Python, SQL
+  }
+\end{itemize}
+
+%------------- WORK EXPERIENCE ----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {AI Product Developer (Intern) - Rooman Technologies~$|$~\href{https://crm.rooman.net}{\underline{CRM (Live)}}}{Dec 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Built the end-to-end backend for \textbf{Blulinked}, a blue-collar workforce marketplace, using \textbf{Python, FastAPI (async SQLAlchemy), and AWS RDS PostgreSQL} - engineered an \textbf{AI-powered conversational voice-interview engine} (\textbf{Groq, LLaMA-3.3-70B}) over \textbf{WebSockets} that runs multilingual interviews across \textbf{5 Indian languages} and auto-extracts structured worker profiles into generated resume PDFs.}
+    \resumeItem{Designed \textbf{JSON-driven question frameworks for 15+ occupations} with specialization branching; integrated \textbf{STT/TTS}, \textbf{OTP + JWT} auth, \textbf{role-based access control (RBAC)} with audit logs, and \textbf{AWS S3} storage for photos, portfolios, and resumes.}
+    \resumeItem{Developed a \textbf{CRM microservice} and a \textbf{React + Vite} employer/admin dashboard with \textbf{Recharts} analytics - worker verification, role- and skill-based labour matching, billing/invoices, and demand-trend dashboards.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%------------- RESEARCH & PUBLICATIONS ----------------
+\section{Research \& Publications}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{AI-Enabled Emotional Well-Being Assistant} - \textbf{\href{https://drive.google.com/file/d/1oOFQPDGsEmyPqTTP1FbleCLaijqveJxw/view?usp=drivesdk}{\underline{Indian Patent Granted}}~$|$~Inventor (2025)}}
+  \resumeItemListStart
+    \resumeItem{Hybrid NLP system combining \textbf{DistilBERT}, \textbf{LinearSVC}, rule-based crisis routing, and the \textbf{Gemini API} for safety-aware, emotion-classified mental-health responses across 7 categories.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%------------- PROJECTS ----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Hybrid Mental-Health Triage Chatbot}~$|$~\emph{Python, PyTorch, DistilBERT, Flask, Docker}~$|$~\href{https://hybrid-chatbot-o0s2.onrender.com}{\underline{Live}}~$|$~\href{https://github.com/afrin2315/hybrid_chatbot}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Engineered a \textbf{confidence-gated ML cascade} (calibrated \textbf{TF-IDF + LinearSVC} $\rightarrow$ fine-tuned \textbf{DistilBERT}) for \textbf{7-class emotion classification} on \textbf{51K samples}, achieving \textbf{0.79 accuracy / 0.75 macro-F1} while cutting latency \textbf{$\sim$17$\times$} (3.5\,ms vs 59\,ms) by escalating only the 42\% of low-confidence inputs to the transformer.}
+    \resumeItem{Added a \textbf{recall-optimized crisis-safety layer (95.7\% recall)} and a live \textbf{explainability panel}; built a \textbf{Flask} service with \textbf{JWT} auth and persistent history, containerized with \textbf{Docker}, deployed on \textbf{Render} with a graceful fallback.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{SmartAttend - QR-Based Attendance System}~$|$~\emph{FastAPI, React, PostgreSQL, JWT, WebSockets}~$|$~\href{https://smart-attend-beryl.vercel.app}{\underline{Live}}~$|$~\href{https://smartattend-api-production-9bd4.up.railway.app/docs}{\underline{API Docs}}~$|$~\href{https://github.com/afrin2315/smart_attend}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Designed a proxy-proof \textbf{QR attendance system} with personal + expiring session QR matching, \textbf{5 role-based access levels}, \textbf{JWT} auth, and bcrypt-hashed passwords.}
+    \resumeItem{Added \textbf{real-time WebSocket} updates, present/late detection, and CSV export; \textbf{FastAPI + SQLAlchemy + Alembic} backend on \textbf{PostgreSQL}, \textbf{React} frontend, deployed on \textbf{Vercel + Railway}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Customer Churn Predictor}~$|$~\emph{Python, XGBoost, SHAP, Streamlit}~$|$~\href{https://churn-predictor-afrin.streamlit.app}{\underline{Live}}~$|$~\href{https://github.com/afrin2315/churn_predictor}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Trained an end-to-end \textbf{XGBoost} churn-prediction pipeline on a \textbf{7K-customer} dataset (EDA, feature engineering) reaching \textbf{0.847 ROC-AUC / 0.63 F1}, with a \textbf{SHAP} explainability panel and an interactive \textbf{Streamlit} dashboard (single + batch-CSV scoring).}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{AI Resume Screener \& Job-Fit Analyzer}~$|$~\emph{Flask, Sentence Transformers, Gemini API, Docker}~$|$~\href{https://huggingface.co/spaces/Afrin18/ai-resume-screener}{\underline{Live}}~$|$~\href{https://github.com/afrin2315/ai-resume-screener}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Created a \textbf{Flask} app scoring resumes against a job description on a \textbf{0--100} scale via \textbf{semantic embeddings + cosine similarity} and LLM reasoning; redacts PII before external calls, containerized with \textbf{Docker} and deployed with a local fallback.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%------------- EDUCATION ----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEduHeading
+    {B.E. in Computer Science \& Engineering (AI \& ML)~$|$~Sai Vidya Institute of Technology, Bangalore}{2022 -- June 2026}
+    {CGPA: \textbf{9.2/10}}
+  \resumeEduHeading
+    {Pre-University~$|$~Karnataka Mahesh PU College~$|$~Bangalore}{2020 -- 2022}
+    {Major: PCMB (Science)\quad Percentage: \textbf{86\%}}
+\resumeSubHeadingListEnd
+
+%------------- CERTIFICATIONS ----------------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in,label={$\bullet$},itemsep=1pt,topsep=2pt,parsep=0pt]
+  \scriptsize{
+    \item \href{https://drive.google.com/file/d/1Mht4NQuwqsVAj4hRFKhs-Z0vb87wFUZJ/view?usp=drivesdk}{\underline{NPTEL (IIT Kanpur)}} - Deep Learning \quad$|$\quad \href{https://drive.google.com/file/d/1BJnSHoe9wD6saVomd9q86K_-0tnUKAvn/view?usp=drivesdk}{\underline{Infosys Springboard}} - AI/ML Foundations \quad$|$\quad \href{https://drive.google.com/file/d/1q9YJYUMaPb_xKZ0VkQ2b1BIadF_1WIFK/view?usp=drivesdk}{\underline{Sonata Software}} - Data Analytics
+    \item \href{https://drive.google.com/file/d/1X_fI9ExbNY_Mi4yLdW2WfBqYY-DpkDGI/view?usp=drivesdk}{\underline{Certisured, SVIT}} - EDA for ML \quad$|$\quad \href{https://drive.google.com/file/d/1hy6chmDGJucVJDgua-939Q1-E9i7D9TY/view?usp=drivesdk}{\underline{Analogica, SVIT}} - Intuition Building for ML \& DL
+  }
+\end{itemize}
+
+\end{document}

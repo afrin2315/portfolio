@@ -1,0 +1,189 @@
+%-------------------------
+% ATS-Optimized 1-Page Resume - Afrin Kousar
+% Target Role: Full Stack Developer
+% Compiler: pdfLaTeX (Overleaf)
+% Font: XCharter (professional serif)
+%-------------------------
+
+\documentclass[letterpaper,9pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\input{glyphtounicode}
+
+%------------- PAGE SETUP ----------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+%------------- SECTION FORMATTING ----------------
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\small\bfseries
+}{}{0em}{}[\color{black}\titlerule\vspace{-1pt}]
+
+%------------- CUSTOM COMMANDS ----------------
+\newcommand{\resumeItem}[1]{%
+  \item\scriptsize{#1}%
+}
+
+\newcommand{\resumeEduHeading}[3]{%
+  \vspace{0pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\small #1} & \textit{\scriptsize #2}\\
+    \scriptsize #3 &\\
+  \end{tabular*}\vspace{-3pt}%
+}
+
+\newcommand{\resumeSubheading}[2]{%
+  \vspace{1pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\small #1} & \textit{\scriptsize #2}\\
+  \end{tabular*}\vspace{-3pt}%
+}
+
+\newcommand{\resumeProjectHeading}[1]{%
+  \vspace{0pt}\item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \scriptsize #1\\
+  \end{tabular*}\vspace{-3pt}%
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,itemsep=1pt,topsep=1pt,parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%============================================================
+\begin{document}
+
+%------------- HEADER ----------------
+\begin{center}
+  {\LARGE\scshape\textbf{Afrin Kousar}}\\\vspace{3pt}
+  \footnotesize
+  Bangalore, Karnataka, India~$|$~
+  \href{mailto:afrinkousar30@gmail.com}{afrinkousar30@gmail.com}~$|$~
+  +91~7975375874~$|$~
+  \href{https://afrin-kousar.netlify.app/}{\underline{Portfolio}}~$|$~
+  \href{https://linkedin.com/in/afrin-kousar}{\underline{LinkedIn}}~$|$~
+  \href{https://github.com/afrin2315}{\underline{GitHub}}
+\end{center}
+\vspace{-7pt}
+
+%------------- SUMMARY ----------------
+\section{Summary}
+{\scriptsize
+\textbf{Full Stack Developer} who ships production web apps end to end - responsive \textbf{React} frontends, \textbf{REST} and \textbf{WebSocket} backends in \textbf{FastAPI/Flask}, relational data on \textbf{PostgreSQL}, secure \textbf{JWT} auth, and \textbf{Docker}-based deployment with \textbf{CI/CD}. Comfortable across the whole stack from UI to database to cloud, with \textbf{5+ live deployments}. \textbf{Indian Patent Holder (2025)}.
+}
+
+%------------- TECHNICAL SKILLS ----------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.1in,label={},itemsep=1pt,topsep=2pt,parsep=0pt]
+  \scriptsize{
+    \item \textbf{Full-Stack Dev:} React.js, Vite, Tailwind CSS, HTML, CSS, FastAPI, Flask, REST APIs, WebSockets, JWT Auth, Gunicorn, Recharts
+    \item \textbf{Languages:} Python, SQL
+    \item \textbf{Databases:} PostgreSQL, SQLite, MongoDB, Redis, SQLAlchemy, Alembic
+    \item \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda, RDS), Docker, GitHub Actions, Vercel, Railway, Hugging Face Spaces
+    \item \textbf{ML \& AI:} Scikit-learn, TensorFlow, PyTorch, XGBoost, DistilBERT, Transformers, LLMs, RAG, LangChain, Gemini API, NLP, Embeddings, FAISS, ChromaDB
+  }
+\end{itemize}
+
+%------------- WORK EXPERIENCE ----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {AI Product Developer (Intern) - Rooman Technologies~$|$~\href{https://crm.rooman.net}{\underline{CRM (Live)}}}{Dec 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Built \textbf{Blulinked}, a blue-collar workforce marketplace, end to end - \textbf{FastAPI (async SQLAlchemy)} backend on \textbf{AWS RDS PostgreSQL}, real-time \textbf{WebSocket} voice interviews, \textbf{OTP + JWT} auth and \textbf{RBAC} admin with audit logs, and a \textbf{React + Vite} employer/admin dashboard with \textbf{Recharts} analytics and \textbf{AWS S3} media storage.}
+    \resumeItem{Developed a standalone \textbf{CRM microservice} and \textbf{JSON-driven question frameworks for 15+ occupations}; integrated a \textbf{Groq LLaMA-3.3-70B} interview engine with STT/TTS and auto-generated resume PDFs, plus role- and skill-based labour matching and billing/invoices.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%------------- RESEARCH & PUBLICATIONS ----------------
+\section{Research \& Publications}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{AI-Enabled Emotional Well-Being Assistant} - \textbf{\href{https://drive.google.com/file/d/1oOFQPDGsEmyPqTTP1FbleCLaijqveJxw/view?usp=drivesdk}{\underline{Indian Patent Granted}}~$|$~Inventor (2025)}}
+  \resumeItemListStart
+    \resumeItem{Hybrid NLP system combining \textbf{DistilBERT}, \textbf{LinearSVC}, rule-based crisis routing, and the \textbf{Gemini API} for safety-aware, emotion-classified mental-health responses across 7 categories.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%------------- PROJECTS ----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{SmartAttend - QR-Based Attendance System}~$|$~\emph{FastAPI, React, PostgreSQL, JWT, WebSockets, Tailwind}~$|$~\href{https://smart-attend-beryl.vercel.app}{\underline{Live}}~$|$~\href{https://smartattend-api-production-9bd4.up.railway.app/docs}{\underline{API Docs}}~$|$~\href{https://github.com/afrin2315/smart_attend}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Designed a \textbf{full-stack QR attendance system} that prevents proxy attendance - each user has a personal QR identity and each session an expiring QR, so attendance records only when both match. Supports \textbf{5 user roles} (Admin/Teacher/HR/Student/Employee) with \textbf{JWT} auth and bcrypt-hashed passwords.}
+    \resumeItem{Added \textbf{real-time live attendance via WebSockets}, present/late detection with a 15-minute grace window, and CSV export. Backend in \textbf{FastAPI + SQLAlchemy + Alembic} on \textbf{Supabase PostgreSQL}; frontend in \textbf{React + Tailwind}; deployed on \textbf{Vercel + Railway}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Hybrid Mental-Health Triage Chatbot}~$|$~\emph{Flask, PyTorch, DistilBERT, JWT, SQLite, Docker}~$|$~\href{https://hybrid-chatbot-o0s2.onrender.com}{\underline{Live}}~$|$~\href{https://github.com/afrin2315/hybrid_chatbot}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Created a full-stack chatbot with a \textbf{Flask} backend, \textbf{JWT/bcrypt} auth, \textbf{SQLite} accounts, and persistent chat history; serves a \textbf{confidence-gated ML cascade} (TF-IDF+LinearSVC $\rightarrow$ DistilBERT) with a live \textbf{explainability panel} exposing routing and per-class confidence.}
+    \resumeItem{Containerized with \textbf{Docker} and deployed end to end on \textbf{Render} with a built-in fallback that keeps the app working when the model backend is unavailable; shipped a reproducible evaluation harness.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{AI Resume Screener \& Job-Fit Analyzer}~$|$~\emph{Flask, Sentence Transformers, Gemini API, Docker}~$|$~\href{https://huggingface.co/spaces/Afrin18/ai-resume-screener}{\underline{Live}}~$|$~\href{https://github.com/afrin2315/ai-resume-screener}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Shipped a \textbf{Flask} web app that scores a resume against a job description on a \textbf{0--100} scale with matching/missing skills and improvement suggestions; redacts PII before external calls, containerized with \textbf{Docker}, deployed on \textbf{Hugging Face} with a local fallback for rate limits.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Customer Churn Predictor}~$|$~\emph{Python, XGBoost, SHAP, Streamlit}~$|$~\href{https://churn-predictor-afrin.streamlit.app}{\underline{Live}}~$|$~\href{https://github.com/afrin2315/churn_predictor}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Trained and deployed an end-to-end \textbf{XGBoost} churn-prediction app (\textbf{0.847 ROC-AUC}, \textbf{0.63 F1}) with a \textbf{SHAP} explainability panel and single/batch-CSV scoring on an interactive \textbf{Streamlit} dashboard.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%------------- EDUCATION ----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEduHeading
+    {B.E. in Computer Science \& Engineering (AI \& ML)~$|$~Sai Vidya Institute of Technology, Bangalore}{2022 -- June 2026}
+    {CGPA: \textbf{9.2/10}}
+  \resumeEduHeading
+    {Pre-University~$|$~Karnataka Mahesh PU College~$|$~Bangalore}{2020 -- 2022}
+    {Major: PCMB (Science)\quad Percentage: \textbf{86\%}}
+\resumeSubHeadingListEnd
+
+%------------- CERTIFICATIONS & ACHIEVEMENTS ----------------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in,label={$\bullet$},itemsep=1pt,topsep=2pt,parsep=0pt]
+  \scriptsize{
+    \item \href{https://drive.google.com/file/d/1Mht4NQuwqsVAj4hRFKhs-Z0vb87wFUZJ/view?usp=drivesdk}{\underline{NPTEL (IIT Kanpur)}} - Deep Learning \quad$|$\quad \href{https://drive.google.com/file/d/1BJnSHoe9wD6saVomd9q86K_-0tnUKAvn/view?usp=drivesdk}{\underline{Infosys Springboard}} - AI/ML Foundations \quad$|$\quad \href{https://drive.google.com/file/d/1q9YJYUMaPb_xKZ0VkQ2b1BIadF_1WIFK/view?usp=drivesdk}{\underline{Sonata Software}} - Data Analytics
+    \item \href{https://drive.google.com/file/d/1X_fI9ExbNY_Mi4yLdW2WfBqYY-DpkDGI/view?usp=drivesdk}{\underline{Certisured, SVIT}} - EDA for ML \quad$|$\quad \href{https://drive.google.com/file/d/1hy6chmDGJucVJDgua-939Q1-E9i7D9TY/view?usp=drivesdk}{\underline{Analogica, SVIT}} - Intuition Building for ML \& DL
+  }
+\end{itemize}
+
+\end{document}
